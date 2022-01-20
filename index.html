@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatrice Incredibile</title>
+
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    
+    <script>
+        // function Sum(a,b)
+        //     {
+        //         return a+b
+        //     }
+        // function PrintSum(a,b)
+        //     {
+        //         //stampa il valore nella console di log
+        //         console.log(a+b);
+        //     }
+        // function Visualizza(a,b)
+        // {
+        //     //stampa il valore nella console di log
+        //     ris=a+b;
+        //     document.getElementById("risultato").innerHTML = ris;
+        // }
+
+        // function Chiedi()
+        // {
+        //     var num1 = parseInt(prompt("Inserisci un numero"));
+        //     var num2 = prompt("Inserisci unaltro numero")*1;
+        //     //stampa il valore nella console di log
+        //     document.getElementById("risultato").innerHTML = num1+num2;
+        // }
+
+        function Operazione()
+        {
+            var num1=document.miaForm2.num1.value*1;
+            var num2=document.miaForm2.num2.value*1;
+            
+            var operando=document.miaForm2.operandi.value;
+
+            switch(operando)
+            {
+                case "+":
+                    ris=num1+num2;
+                    break;
+                case "-":
+                    ris=num1-num2;
+                    break;
+                case "*":
+                    ris=num1*num2;
+                    break;
+                case "/":
+                    ris=num1/num2;
+                    break;
+
+            }
+
+            document.getElementById("ris").innerHTML = ris;
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <!-- <input type="button" value="5+10" onclick="x=Sum(5,10);document.write(x)" >
+
+    <input type="button" value="5+8 (stampato nel log)" onclick="x=Sum(5,8);console.log(x)" >
+
+    <input type="button" value="Calcola e visualizza nel documento" onclick="Visualizza(100,20)" >
+
+    <input type="button" value="Calcola da Prompt" onclick="Chiedi()" >
+
+    <p id="risultato">Questo è il paragrafo dove metterò il risultato</p>
+
+    <FORM name="miaForm">
+        <input type="text" name="Cognome" size=20 >
+        <input type="button" name="Bottone" value="Show" 
+            onclick="alert(document.miaForm.Cognome.value)"
+        >
+    </FORM> -->
+<div id="FullScreen">
+    <div id="Centro">
+        <FORM name="miaForm2">
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" name="num1">
+                    </td>
+                    <td>
+                        <select name="operandi" id="operandi">
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="num2">
+                    </td>
+                    <td>
+                        <input type="button"value="Calcola" onclick="Operazione()">
+                    </td>
+                    <td>
+                        <p id="ris">risultato</p>
+                    </td>
+                </tr>
+            </table>
+        </FORM>
+    </div>
+</div>
+    <!-- <FORM name="miaForm2">
+
+        <input type="text" name="num1" size=20 >
+
+        <select name="operandi" id="operandi">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <input type="text" name="num2" size=20 >
+
+        <input type="button"value="Calcola" onclick="Operazione()">
+    </FORM>
+
+    <p id="ris">risultato</p> -->
+
+    <!-- <script type="text/javascript">
+
+            x=1;
+            y=2;
+
+            document.write("<br>");
+
+            document.write(x+y);
+
+            document.write("<br>");
+            //si possono cambiare i tipi delle variabili !
+
+            x="1";
+
+            document.write(x+y);
+
+            document.write("<br>");
+
+            document.write("La variabile x è di tipo: "+typeof(x)+"<br>");
+
+            document.write("La variabile y è di tipo: "+typeof(y)+"<br>");
+
+            document.write("document. è un: "+typeof(document)+"<br>");
+
+            document.write("document.write è una: "+typeof(document.write)+"<br>");
+
+            document.write("risultato della funzione Sum: "+x+"<br>");
+            x=Sum(1,2);
+            document.write("risultato della funzione Sum: "+x+"<br>");
+            PrintSum(3,2);
+
+
+    </script> -->
+    
+</body>
+</html>
